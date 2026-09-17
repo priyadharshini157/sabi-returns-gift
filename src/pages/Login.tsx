@@ -214,11 +214,11 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
         `
       }}
     >
-      {/* Main Split Card Container */}
-      <div className="w-full max-w-[1040px] min-h-[540px] md:min-h-[610px] rounded-2xl sm:rounded-[2.25rem] shadow-[0_25px_80px_rgba(0,0,0,0.65),0_0_50px_rgba(0,0,0,0.4)] flex flex-col md:flex-row overflow-hidden border border-white/15 relative z-10 my-auto transition-all duration-300">
+      {/* Main Split Card Container - Responsive Aspect Ratio (16:10 Laptop Perfect Ratio) */}
+      <div className="laptop-auth-card w-full max-w-[1020px] rounded-2xl sm:rounded-[2rem] shadow-[0_25px_80px_rgba(0,0,0,0.65),0_0_50px_rgba(0,0,0,0.4)] flex flex-col md:flex-row overflow-hidden border border-white/15 relative z-10 my-auto transition-all duration-300">
         
         {/* ================= LEFT SIDE (Rich Champagne Gold Branding: #D9A928) ================= */}
-        <div className="w-full md:w-1/2 relative bg-[#D9A928] flex flex-col items-center justify-center p-6 sm:p-8 md:p-12 text-center overflow-hidden min-h-[220px] sm:min-h-[280px] md:min-h-auto">
+        <div className="w-full md:w-1/2 relative bg-[#D9A928] flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 text-center overflow-hidden min-h-[200px] sm:min-h-[240px] md:min-h-auto flex-shrink-0">
           
           {/* Subtle Dynamic Bottom Waves: #E4BE5C */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -260,30 +260,30 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
           </div>
           
           {/* Left Panel Content */}
-          <div className="relative z-10 flex flex-col items-center max-w-[360px]">
+          <div className="relative z-10 flex flex-col items-center max-w-[340px] px-2">
             {/* Logo Badge Container */}
-            <div className="w-[110px] h-[110px] sm:w-[160px] sm:h-[160px] md:w-[220px] md:h-[220px] p-2 flex items-center justify-center mb-3 sm:mb-6 rounded-2xl sm:rounded-[1.75rem] overflow-hidden shadow-[0_16px_35px_rgba(0,0,0,0.32)] bg-black border border-[#F1D27A]/30 relative group transition-transform duration-500 hover:scale-[1.02]">
+            <div className="laptop-auth-logo w-[90px] h-[90px] sm:w-[130px] sm:h-[130px] md:w-[clamp(110px,15vh,175px)] md:h-[clamp(110px,15vh,175px)] p-2 flex items-center justify-center mb-2 sm:mb-4 rounded-2xl sm:rounded-[1.5rem] overflow-hidden shadow-[0_16px_35px_rgba(0,0,0,0.32)] bg-black border border-[#F1D27A]/30 relative group transition-transform duration-500 hover:scale-[1.02]">
               <img 
                 src="/logo.jpeg" 
                 alt="Sabi Return Gifts" 
-                className="w-full h-full object-cover rounded-xl sm:rounded-[1.4rem]" 
+                className="w-full h-full object-cover rounded-xl sm:rounded-[1.25rem]" 
               />
             </div>
             
             {/* Brand Titles: Ivory White #F8F5ED */}
-            <h1 className="text-xl sm:text-2xl md:text-[34px] font-serif font-bold text-[#F8F5ED] tracking-wider mb-1 drop-shadow-md">
+            <h1 className="laptop-auth-brand-title text-xl sm:text-2xl md:text-[clamp(22px,2.6vh,30px)] font-serif font-bold text-[#F8F5ED] tracking-wider mb-0.5 sm:mb-1 drop-shadow-md">
               SABI RETURNS
             </h1>
             {/* Subtitle: Soft White #E8EAF0 */}
-            <p className="text-[10px] sm:text-xs font-bold tracking-[0.25em] sm:tracking-[0.3em] text-[#E8EAF0] mb-2 sm:mb-4 uppercase drop-shadow-sm opacity-95">
+            <p className="laptop-auth-brand-sub text-[9px] sm:text-[10px] md:text-xs font-bold tracking-[0.25em] sm:tracking-[0.3em] text-[#E8EAF0] mb-1.5 sm:mb-3 uppercase drop-shadow-sm opacity-95">
               PREMIUM GIFTING SOLUTIONS
             </p>
             
             {/* Decorative Line: Champagne #F1D27A */}
-            <div className="w-10 sm:w-12 h-[2px] bg-[#F1D27A] mb-2 sm:mb-4 rounded-full shadow-sm"></div>
+            <div className="w-8 sm:w-10 h-[2px] bg-[#F1D27A] mb-1.5 sm:mb-3 rounded-full shadow-sm"></div>
             
             {/* Tagline: Soft White #E8EAF0 */}
-            <p className="text-[#E8EAF0] text-[11px] sm:text-[13px] font-medium px-2 sm:px-3 leading-relaxed drop-shadow-sm opacity-95 max-w-[320px]">
+            <p className="laptop-auth-tagline text-[#E8EAF0] text-[10px] sm:text-[11px] md:text-[12px] font-medium px-2 leading-relaxed drop-shadow-sm opacity-95 max-w-[300px]">
               Empowering your celebrations with elegant,<br className="hidden sm:inline" /> secure, and seamless return gift solutions.
             </p>
           </div>
@@ -295,34 +295,34 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
           <div className={`book-card-inner ${isFlipped ? "is-flipped" : ""}`}>
             
             {/* ---------------- FRONT PAGE: LOGIN ---------------- */}
-            <div className="book-face p-5 sm:p-8 md:p-10 lg:p-12">
-              <div className="max-w-[400px] w-full mx-auto space-y-5 sm:space-y-7">
+            <div className="book-face laptop-auth-right-panel p-4 sm:p-6 md:p-8 lg:p-10 flex flex-col justify-center">
+              <div className="max-w-[360px] w-full mx-auto space-y-3.5 sm:space-y-5 md:space-y-6">
                 
                 {/* Header: Ivory White #F8F5ED & Muted Blue-Gray #9DAAC2 */}
-                <div className="text-center space-y-1">
-                  <h2 className="text-2xl sm:text-3xl md:text-[38px] font-serif font-bold text-[#F8F5ED] tracking-wide drop-shadow-md">
+                <div className="text-center space-y-0.5 sm:space-y-1">
+                  <h2 className="laptop-auth-heading text-xl sm:text-2xl md:text-[clamp(24px,3vh,32px)] font-serif font-bold text-[#F8F5ED] tracking-wide drop-shadow-md">
                     Login
                   </h2>
-                  <p className="text-[#9DAAC2] text-xs sm:text-sm font-medium">
+                  <p className="laptop-auth-subtext text-[#9DAAC2] text-[11px] sm:text-xs md:text-sm font-medium">
                     Sign in to your Sabi Returns account
                   </p>
                 </div>
 
                 {/* Error Message Display */}
                 {loginError && (
-                  <div className="bg-red-500/15 border border-red-500/40 text-red-300 text-xs sm:text-sm font-medium px-3.5 py-2.5 rounded-xl text-center">
+                  <div className="bg-red-500/15 border border-red-500/40 text-red-300 text-xs sm:text-sm font-medium px-3.5 py-2 rounded-xl text-center">
                     {loginError}
                   </div>
                 )}
 
                 {/* Login Form */}
-                <form onSubmit={handleLoginSubmit} className="space-y-6">
-                  <div className="space-y-4">
+                <form onSubmit={handleLoginSubmit} className="space-y-4 sm:space-y-5">
+                  <div className="space-y-3 sm:space-y-3.5">
                     
                     {/* Username Input */}
                     <div className="relative group">
                       <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
-                        <User className="h-5 w-5 text-[#D9A628] transition-colors group-focus-within:text-[#F0C64A]" />
+                        <User className="h-4.5 w-4.5 text-[#D9A628] transition-colors group-focus-within:text-[#F0C64A]" />
                       </div>
                       <input 
                         id="username" 
@@ -332,14 +332,14 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
                         placeholder="Username" 
                         required 
                         autoComplete="username"
-                        className="w-full pl-12 pr-4 h-[52px] bg-[#131d35] border border-[#223354] focus:border-[#D9A628] focus:ring-1 focus:ring-[#D9A628] rounded-xl text-[#E8EAF0] placeholder-[#8995AA] text-sm sm:text-base font-medium outline-none focus:outline-none transition-all duration-200 shadow-inner"
+                        className="laptop-auth-input w-full pl-11 pr-4 h-[clamp(42px,5vh,48px)] bg-[#131d35] border border-[#223354] focus:border-[#D9A628] focus:ring-1 focus:ring-[#D9A628] rounded-xl text-[#E8EAF0] placeholder-[#8995AA] text-xs sm:text-sm font-medium outline-none focus:outline-none transition-all duration-200 shadow-inner"
                       />
                     </div>
                     
                     {/* Password Input */}
                     <div className="relative group">
                       <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
-                        <Lock className="h-5 w-5 text-[#D9A628] transition-colors group-focus-within:text-[#F0C64A]" />
+                        <Lock className="h-4.5 w-4.5 text-[#D9A628] transition-colors group-focus-within:text-[#F0C64A]" />
                       </div>
                       <input 
                         id="password" 
@@ -349,31 +349,31 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
                         placeholder="Password" 
                         required 
                         autoComplete="current-password"
-                        className="w-full pl-12 pr-12 h-[52px] bg-[#131d35] border border-[#223354] focus:border-[#D9A628] focus:ring-1 focus:ring-[#D9A628] rounded-xl text-[#E8EAF0] placeholder-[#8995AA] text-sm sm:text-base font-medium outline-none focus:outline-none transition-all duration-200 shadow-inner"
+                        className="laptop-auth-input w-full pl-11 pr-11 h-[clamp(42px,5vh,48px)] bg-[#131d35] border border-[#223354] focus:border-[#D9A628] focus:ring-1 focus:ring-[#D9A628] rounded-xl text-[#E8EAF0] placeholder-[#8995AA] text-xs sm:text-sm font-medium outline-none focus:outline-none transition-all duration-200 shadow-inner"
                       />
                       <button 
                         type="button" 
                         onClick={() => setShowPassword(!showPassword)}
-                        className="absolute inset-y-0 right-0 flex items-center pr-4 text-[#D9A628] hover:text-[#E8BD45] transition-colors cursor-pointer"
+                        className="absolute inset-y-0 right-0 flex items-center pr-3.5 text-[#D9A628] hover:text-[#E8BD45] transition-colors cursor-pointer"
                         aria-label={showPassword ? "Hide password" : "Show password"}
                       >
-                        {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+                        {showPassword ? <EyeOff className="h-4.5 w-4.5" /> : <Eye className="h-4.5 w-4.5" />}
                       </button>
                     </div>
                   </div>
 
                   {/* Options Row: Remember Me & Register button (perfectly aligned with box edges) */}
                   <div className="flex items-center justify-between px-0.5 pt-0.5">
-                    <div className="flex items-center space-x-2.5">
+                    <div className="flex items-center space-x-2">
                       <Checkbox 
                         id="remember" 
                         checked={rememberMe}
                         onCheckedChange={(checked) => setRememberMe(!!checked)}
-                        className="w-4.5 h-4.5 rounded border-[#223354] data-[state=checked]:bg-[#D9A628] data-[state=checked]:border-[#D9A628] data-[state=checked]:text-white focus-visible:ring-1 focus-visible:ring-[#D9A628]" 
+                        className="w-4 h-4 rounded border-[#223354] data-[state=checked]:bg-[#D9A628] data-[state=checked]:border-[#D9A628] data-[state=checked]:text-white focus-visible:ring-1 focus-visible:ring-[#D9A628]" 
                       />
                       <label
                         htmlFor="remember"
-                        className="text-sm font-medium leading-none text-[#E8EAF0] cursor-pointer hover:text-white transition-colors select-none"
+                        className="text-xs sm:text-sm font-medium leading-none text-[#E8EAF0] cursor-pointer hover:text-white transition-colors select-none"
                       >
                         Remember Me?
                       </label>
@@ -383,18 +383,18 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
                     <button
                       type="button"
                       onClick={() => setIsFlipped(true)}
-                      className="text-sm font-semibold text-[#D9A628] hover:text-[#E8BD45] transition-colors underline underline-offset-4 cursor-pointer"
+                      className="text-xs sm:text-sm font-semibold text-[#D9A628] hover:text-[#E8BD45] transition-colors underline underline-offset-4 cursor-pointer"
                     >
                       Register
                     </button>
                   </div>
 
                   {/* Action Button: Luxury Gold #D9A628 */}
-                  <div className="pt-2 flex justify-center">
+                  <div className="pt-1.5 flex justify-center">
                     <Button 
                       type="submit" 
                       disabled={isLoading}
-                      className="w-full sm:w-52 h-12 min-h-[44px] bg-[#D9A628] hover:bg-[#E8BD45] text-white font-bold rounded-full shadow-[0_8px_25px_rgba(217,166,40,0.5)] hover:shadow-[0_12px_32px_rgba(232,189,69,0.65)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 text-sm sm:text-base tracking-wide border-none cursor-pointer flex items-center justify-center touch-friendly-btn"
+                      className="laptop-auth-btn w-full sm:w-48 h-[clamp(42px,5vh,48px)] min-h-[42px] bg-[#D9A628] hover:bg-[#E8BD45] text-white font-bold rounded-full shadow-[0_8px_25px_rgba(217,166,40,0.5)] hover:shadow-[0_12px_32px_rgba(232,189,69,0.65)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 text-xs sm:text-sm tracking-wide border-none cursor-pointer flex items-center justify-center touch-friendly-btn"
                     >
                       {isLoading ? "Logging In..." : "Log In"}
                     </Button>
@@ -405,34 +405,34 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
             </div>
 
             {/* ---------------- BACK PAGE: REGISTER (3D Book Turned View) ---------------- */}
-            <div className="book-face-back p-5 sm:p-8 md:p-10 lg:p-12">
-              <div className="max-w-[400px] w-full mx-auto space-y-5 sm:space-y-6">
+            <div className="book-face-back laptop-auth-right-panel p-4 sm:p-6 md:p-8 lg:p-10 flex flex-col justify-center">
+              <div className="max-w-[360px] w-full mx-auto space-y-3.5 sm:space-y-4 md:space-y-5">
                 
                 {/* Header: Ivory White #F8F5ED */}
-                <div className="text-center space-y-1">
-                  <h2 className="text-2xl sm:text-3xl md:text-[38px] font-serif font-bold text-[#F8F5ED] tracking-wide drop-shadow-md">
+                <div className="text-center space-y-0.5 sm:space-y-1">
+                  <h2 className="laptop-auth-heading text-xl sm:text-2xl md:text-[clamp(24px,3vh,32px)] font-serif font-bold text-[#F8F5ED] tracking-wide drop-shadow-md">
                     Register
                   </h2>
-                  <p className="text-[#9DAAC2] text-xs sm:text-sm font-medium">
+                  <p className="laptop-auth-subtext text-[#9DAAC2] text-[11px] sm:text-xs md:text-sm font-medium">
                     Create your Sabi Returns account
                   </p>
                 </div>
 
                 {/* Error Message Display */}
                 {registerError && (
-                  <div className="bg-red-500/15 border border-red-500/40 text-red-300 text-xs sm:text-sm font-medium px-3.5 py-2.5 rounded-xl text-center">
+                  <div className="bg-red-500/15 border border-red-500/40 text-red-300 text-xs sm:text-sm font-medium px-3.5 py-2 rounded-xl text-center">
                     {registerError}
                   </div>
                 )}
 
                 {/* Register Form */}
-                <form onSubmit={handleRegisterSubmit} className="space-y-5">
-                  <div className="space-y-3.5">
+                <form onSubmit={handleRegisterSubmit} className="space-y-3.5 sm:space-y-4">
+                  <div className="space-y-2.5 sm:space-y-3">
                     
                     {/* Full Name Input */}
                     <div className="relative group">
                       <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
-                        <User className="h-5 w-5 text-[#D9A628] transition-colors group-focus-within:text-[#F0C64A]" />
+                        <User className="h-4.5 w-4.5 text-[#D9A628] transition-colors group-focus-within:text-[#F0C64A]" />
                       </div>
                       <input 
                         id="reg-name" 
@@ -441,14 +441,14 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
                         onChange={(e) => setRegName(e.target.value)} 
                         placeholder="Full Name" 
                         required 
-                        className="w-full pl-12 pr-4 h-[52px] bg-[#131d35] border border-[#223354] focus:border-[#D9A628] focus:ring-1 focus:ring-[#D9A628] rounded-xl text-[#E8EAF0] placeholder-[#8995AA] text-sm sm:text-base font-medium outline-none focus:outline-none transition-all duration-200 shadow-inner"
+                        className="laptop-auth-input w-full pl-11 pr-4 h-[clamp(40px,4.8vh,46px)] bg-[#131d35] border border-[#223354] focus:border-[#D9A628] focus:ring-1 focus:ring-[#D9A628] rounded-xl text-[#E8EAF0] placeholder-[#8995AA] text-xs sm:text-sm font-medium outline-none focus:outline-none transition-all duration-200 shadow-inner"
                       />
                     </div>
 
                     {/* Username Input */}
                     <div className="relative group">
                       <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
-                        <User className="h-5 w-5 text-[#D9A628] transition-colors group-focus-within:text-[#F0C64A]" />
+                        <User className="h-4.5 w-4.5 text-[#D9A628] transition-colors group-focus-within:text-[#F0C64A]" />
                       </div>
                       <input 
                         id="reg-username" 
@@ -458,14 +458,14 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
                         placeholder="Username" 
                         required 
                         autoComplete="username"
-                        className="w-full pl-12 pr-4 h-[52px] bg-[#131d35] border border-[#223354] focus:border-[#D9A628] focus:ring-1 focus:ring-[#D9A628] rounded-xl text-[#E8EAF0] placeholder-[#8995AA] text-sm sm:text-base font-medium outline-none focus:outline-none transition-all duration-200 shadow-inner"
+                        className="laptop-auth-input w-full pl-11 pr-4 h-[clamp(40px,4.8vh,46px)] bg-[#131d35] border border-[#223354] focus:border-[#D9A628] focus:ring-1 focus:ring-[#D9A628] rounded-xl text-[#E8EAF0] placeholder-[#8995AA] text-xs sm:text-sm font-medium outline-none focus:outline-none transition-all duration-200 shadow-inner"
                       />
                     </div>
                     
                     {/* Password Input */}
                     <div className="relative group">
                       <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
-                        <Lock className="h-5 w-5 text-[#D9A628] transition-colors group-focus-within:text-[#F0C64A]" />
+                        <Lock className="h-4.5 w-4.5 text-[#D9A628] transition-colors group-focus-within:text-[#F0C64A]" />
                       </div>
                       <input 
                         id="reg-password" 
@@ -474,39 +474,39 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
                         onChange={(e) => setRegPassword(e.target.value)} 
                         placeholder="Password" 
                         required 
-                        className="w-full pl-12 pr-12 h-[52px] bg-[#131d35] border border-[#223354] focus:border-[#D9A628] focus:ring-1 focus:ring-[#D9A628] rounded-xl text-[#E8EAF0] placeholder-[#8995AA] text-sm sm:text-base font-medium outline-none focus:outline-none transition-all duration-200 shadow-inner"
+                        className="laptop-auth-input w-full pl-11 pr-11 h-[clamp(40px,4.8vh,46px)] bg-[#131d35] border border-[#223354] focus:border-[#D9A628] focus:ring-1 focus:ring-[#D9A628] rounded-xl text-[#E8EAF0] placeholder-[#8995AA] text-xs sm:text-sm font-medium outline-none focus:outline-none transition-all duration-200 shadow-inner"
                       />
                       <button 
                         type="button" 
                         onClick={() => setShowRegPassword(!showRegPassword)}
-                        className="absolute inset-y-0 right-0 flex items-center pr-4 text-[#D9A628] hover:text-[#E8BD45] transition-colors cursor-pointer"
+                        className="absolute inset-y-0 right-0 flex items-center pr-3.5 text-[#D9A628] hover:text-[#E8BD45] transition-colors cursor-pointer"
                         aria-label={showRegPassword ? "Hide password" : "Show password"}
                       >
-                        {showRegPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+                        {showRegPassword ? <EyeOff className="h-4.5 w-4.5" /> : <Eye className="h-4.5 w-4.5" />}
                       </button>
                     </div>
                   </div>
 
                   {/* Flip Back to Login Row (perfectly aligned with box edges) */}
                   <div className="flex items-center justify-between px-0.5 pt-0.5">
-                    <span className="text-sm text-[#9DAAC2] font-medium">
+                    <span className="text-xs sm:text-sm text-[#9DAAC2] font-medium">
                       Already have an account?
                     </span>
                     <button
                       type="button"
                       onClick={() => setIsFlipped(false)}
-                      className="text-sm font-semibold text-[#D9A628] hover:text-[#E8BD45] transition-colors underline underline-offset-4 cursor-pointer"
+                      className="text-xs sm:text-sm font-semibold text-[#D9A628] hover:text-[#E8BD45] transition-colors underline underline-offset-4 cursor-pointer"
                     >
                       Login
                     </button>
                   </div>
 
                   {/* Action Button */}
-                  <div className="pt-2 flex justify-center">
+                  <div className="pt-1.5 flex justify-center">
                     <Button 
                       type="submit" 
                       disabled={isRegistering}
-                      className="w-full sm:w-52 h-12 min-h-[44px] bg-[#D9A628] hover:bg-[#E8BD45] text-white font-bold rounded-full shadow-[0_8px_25px_rgba(217,166,40,0.5)] hover:shadow-[0_12px_32px_rgba(232,189,69,0.65)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 text-sm sm:text-base tracking-wide border-none cursor-pointer flex items-center justify-center touch-friendly-btn"
+                      className="laptop-auth-btn w-full sm:w-48 h-[clamp(42px,5vh,48px)] min-h-[42px] bg-[#D9A628] hover:bg-[#E8BD45] text-white font-bold rounded-full shadow-[0_8px_25px_rgba(217,166,40,0.5)] hover:shadow-[0_12px_32px_rgba(232,189,69,0.65)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 text-xs sm:text-sm tracking-wide border-none cursor-pointer flex items-center justify-center touch-friendly-btn"
                     >
                       {isRegistering ? "Creating..." : "Create Account"}
                     </Button>
