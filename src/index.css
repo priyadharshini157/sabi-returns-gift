@@ -2229,3 +2229,132 @@ body {
   }
 }
 
+/* =========================================================================
+   UNIVERSAL LAPTOP & ALL-DEVICE ASPECT RATIO & ADAPTIVE DISPLAY SYSTEM
+   Ensures perfect proportions, no overflow/cutoffs across 13", 14", 15", 16"
+   laptops (1366x768, 1440x900, 1080p with 125%/150% Windows display scaling)
+   ========================================================================= */
+
+/* 1. Login & Auth Card Golden Aspect Ratio (16:10 Laptop Natural Ratio) */
+.laptop-auth-card {
+  width: min(1000px, 94vw);
+  border-radius: clamp(1rem, 2vw, 2rem);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.65), 0 0 50px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .laptop-auth-card {
+    display: flex;
+    flex-direction: row;
+    max-height: min(620px, 92dvh);
+    min-height: min(480px, 86dvh);
+    aspect-ratio: 1.62 / 1;
+  }
+}
+
+/* 2. Short Laptop Viewports (e.g. 1366x768, 1080p @ 125%/150% Windows scaling) */
+@media (max-height: 760px) {
+  .laptop-auth-card {
+    max-height: 94dvh !important;
+  }
+  
+  .laptop-auth-logo {
+    width: clamp(70px, 12vh, 115px) !important;
+    height: clamp(70px, 12vh, 115px) !important;
+    margin-bottom: 0.35rem !important;
+    padding: 0.35rem !important;
+  }
+
+  .laptop-auth-brand-title {
+    font-size: clamp(1.15rem, 2.2vh, 1.5rem) !important;
+    margin-bottom: 0.15rem !important;
+  }
+
+  .laptop-auth-brand-sub {
+    font-size: 0.62rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .laptop-auth-tagline {
+    display: none !important; /* Hide secondary tagline on short screens to maintain pristine aspect ratio */
+  }
+
+  .laptop-auth-right-panel {
+    padding: clamp(0.75rem, 2vw, 1.35rem) !important;
+  }
+
+  .laptop-auth-heading {
+    font-size: clamp(1.4rem, 2.6vh, 1.85rem) !important;
+  }
+
+  .laptop-auth-subtext {
+    font-size: 0.72rem !important;
+  }
+
+  .laptop-auth-input {
+    height: clamp(38px, 4.8vh, 44px) !important;
+    font-size: 0.82rem !important;
+  }
+
+  .laptop-auth-btn {
+    height: clamp(38px, 4.8vh, 44px) !important;
+    font-size: 0.82rem !important;
+  }
+}
+
+/* 3. Dashboard Laptop Layout Adaptive Controls */
+@media (min-width: 1024px) and (min-height: 860px) {
+  .laptop-dashboard-scroll {
+    display: flex !important;
+    flex-direction: column !important;
+    overflow-y: hidden !important;
+    min-height: 0 !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-height: 859px) {
+  /* Standard laptops with limited vertical height */
+  .laptop-dashboard-scroll {
+    overflow-y: auto !important;
+    display: block !important;
+  }
+
+  .laptop-dashboard-scroll .responsive-table-container {
+    min-height: 380px !important;
+    max-height: 520px !important;
+  }
+
+  /* Compact header & metric cards on short laptops */
+  .laptop-dashboard-metric-card {
+    min-height: 105px !important;
+    padding: 0.75rem 0.9rem !important;
+  }
+
+  .laptop-dashboard-metric-card h3 {
+    font-size: 1.45rem !important;
+  }
+}
+
+/* 4. Global Laptop Table Cell Compactness & Contrast */
+@media (min-width: 1024px) and (max-width: 1536px) {
+  table thead th:not(.fixed *):not(.sabi-calendar-popover *) {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    padding-left: 0.65rem !important;
+    padding-right: 0.65rem !important;
+    font-size: 0.7rem !important;
+  }
+
+  table tbody td:not(.fixed *):not(.sabi-calendar-popover *) {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    padding-left: 0.65rem !important;
+    padding-right: 0.65rem !important;
+    font-size: 0.8rem !important;
+  }
+}
+
