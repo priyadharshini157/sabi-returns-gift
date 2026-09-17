@@ -4724,7 +4724,7 @@ export default function Dashboard() {
         )}
 
         {showHeader && (
-          <header className="bg-[#0e1628] border-b border-blue-900/50 px-3 sm:px-4 md:px-8 py-3 sm:py-4 flex justify-between items-center shadow-md relative z-50 print:hidden gap-3 flex-wrap sm:flex-nowrap">
+          <header className="bg-[#0e1628] border-b border-blue-900/50 px-3 sm:px-5 md:px-6 py-2.5 sm:py-3 flex justify-between items-center shadow-md relative z-50 print:hidden gap-2 sm:gap-3 flex-wrap sm:flex-nowrap">
             <div className="flex items-center gap-2 sm:gap-3 md:gap-5 min-w-0">
               <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="p-2 text-blue-200 bg-[#19233b] hover:bg-[#233152] rounded-lg transition-colors border border-blue-800/60 shrink-0 cursor-pointer" title="Toggle Menu">
                 <Menu size={22} />
@@ -4772,9 +4772,9 @@ export default function Dashboard() {
         )}
 
         <div className={`flex-1 ${(activeTab === 'dashboard1' || activeTab === 'dashboard2')
-            ? 'overflow-y-auto lg:overflow-y-hidden lg:flex lg:flex-col lg:min-h-0'
+            ? 'laptop-dashboard-scroll'
             : 'overflow-y-auto'
-          } custom-scrollbar p-2 md:p-4 print:p-0 print:overflow-visible`}>
+          } custom-scrollbar p-2 sm:p-3 md:p-4 print:p-0 print:overflow-visible`}>
 
           {activeTab === 'daily_tasks' && (
             <div className="w-full h-full animate-in fade-in duration-300">
@@ -5618,7 +5618,7 @@ export default function Dashboard() {
                     : 'hidden'
                   } gap-3 md:gap-4 mb-6 print:hidden mt-1 items-stretch`}>
 
-                  <div className="relative bg-[#0d1527] p-3.5 rounded-[1.5rem] shadow-[0_10px_25px_rgba(0,0,0,0.5)] border-2 border-white/20 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 h-full min-h-[135px]">
+                  <div className="laptop-dashboard-metric-card relative bg-[#0d1527] p-3 md:p-3.5 rounded-[1.5rem] shadow-[0_10px_25px_rgba(0,0,0,0.5)] border-2 border-white/20 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 h-full min-h-[105px] md:min-h-[125px]">
                     <div className="flex justify-between items-start mb-1 relative z-10">
                       <p className="text-sm font-black text-amber-400 tracking-wide uppercase">Filtered Orders</p>
                       <div className="w-8 h-8 rounded-full flex items-center justify-center bg-amber-500/20 text-amber-400 border border-amber-400/30 shadow-inner"><ShoppingBag size={16} /></div>
@@ -5660,7 +5660,7 @@ export default function Dashboard() {
                       )).sort();
 
                       return (
-                        <div className="relative bg-[#0d1527] p-3.5 rounded-[1.5rem] shadow-[0_10px_25px_rgba(0,0,0,0.5)] border-2 border-white/20 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 h-full min-h-[135px]">
+                        <div className="laptop-dashboard-metric-card relative bg-[#0d1527] p-3 md:p-3.5 rounded-[1.5rem] shadow-[0_10px_25px_rgba(0,0,0,0.5)] border-2 border-white/20 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 h-full min-h-[105px] md:min-h-[125px]">
                           <div className="flex justify-between items-start mb-1 relative z-10">
                             <div className="flex items-center gap-1 group relative flex-1 min-w-0">
                               <p className="text-[12px] font-black text-white tracking-wide uppercase leading-tight truncate max-w-[110px] sm:max-w-[140px]" title="Total Items Sold">
@@ -5750,7 +5750,7 @@ export default function Dashboard() {
                           ?? (availableChocolatesData.topChocolates.find(c => c[0].toLowerCase() === d1SelectedChocolateBoxFilter.toLowerCase())?.[1] || 0));
 
                     return (
-                    <div className="relative bg-[#0d1527] p-3.5 rounded-[1.5rem] shadow-[0_10px_25px_rgba(0,0,0,0.5)] border-2 border-white/20 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 h-full min-h-[135px]">
+                    <div className="laptop-dashboard-metric-card relative bg-[#0d1527] p-3 md:p-3.5 rounded-[1.5rem] shadow-[0_10px_25px_rgba(0,0,0,0.5)] border-2 border-white/20 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 h-full min-h-[105px] md:min-h-[125px]">
                       {/* Top Row: Title + Dropdown + Gift Icon */}
                       <div className="flex justify-between items-start mb-1 relative z-10">
                         <div className="flex items-center gap-1 group relative flex-1 min-w-0">
@@ -6034,7 +6034,7 @@ export default function Dashboard() {
                   })()}
 
 
-                  <div className="relative bg-[#0d1527] p-3.5 rounded-[1.5rem] shadow-[0_10px_25px_rgba(0,0,0,0.5)] border-2 border-white/20 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 h-full min-h-[135px] overflow-hidden group">
+                  <div className="laptop-dashboard-metric-card relative bg-[#0d1527] p-3 md:p-3.5 rounded-[1.5rem] shadow-[0_10px_25px_rgba(0,0,0,0.5)] border-2 border-white/20 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 h-full min-h-[105px] md:min-h-[125px] overflow-hidden group">
                     {/* Animated Liquid Wave Filling Background */}
                     <div 
                       className="absolute bottom-0 left-0 right-0 transition-all duration-700 ease-out z-0 pointer-events-none rounded-b-[1.3rem] overflow-hidden"
@@ -6164,7 +6164,7 @@ export default function Dashboard() {
                   </div>
 
 
-                  <div style={{ backgroundColor: '#0d1527', color: '#ffffff' }} className="revenue-card-stat relative bg-[#0d1527] p-3.5 rounded-[1.5rem] shadow-[0_10px_25px_rgba(0,0,0,0.5)] border-2 border-emerald-500/40 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 h-full min-h-[120px]">
+                  <div style={{ backgroundColor: '#0d1527', color: '#ffffff' }} className="laptop-dashboard-metric-card revenue-card-stat relative bg-[#0d1527] p-3 md:p-3.5 rounded-[1.5rem] shadow-[0_10px_25px_rgba(0,0,0,0.5)] border-2 border-emerald-500/40 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 h-full min-h-[105px] md:min-h-[120px]">
                     <div className="flex justify-between items-start w-full mb-1.5 relative z-10">
                       <div className="flex items-center gap-1 group relative">
                         <p className="text-[11px] font-black text-amber-400 tracking-wide leading-tight uppercase">Revenue <br />Filter</p>
